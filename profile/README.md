@@ -6,7 +6,7 @@
 
 <p align="center">
   <b>Official GitHub Organization of Mutu Gading Tekstil</b><br>
-  Central Java, Indonesia
+  Indonesia, Central Java
 </p>
 
 <p align="center">
@@ -16,68 +16,95 @@
   <a href="mailto:it@mutugading.com">
     <img src="https://img.shields.io/badge/Email-it%40mutugading.com-green" alt="Email Us">
   </a>
+  <a href="https://github.com/mutugading" target="_blank">
+    <img src="https://img.shields.io/github/followers/mutugading?label=Follow&style=social" alt="GitHub Followers">
+  </a>
 </p>
 
 ---
 
-## Tentang Kami
-Mutu Gading Tekstil merupakan perusahaan tekstil di Indonesia yang berkomitmen untuk:
-- Menghasilkan produk tekstil berkualitas tinggi
-- Menerapkan inovasi dan teknologi mutakhir
-- Menjaga kepuasan pelanggan melalui layanan prima
+## 🌟 About Us
+**Mutu Gading Tekstil** is a leading textile company in Indonesia focused on:
 
-Melalui GitHub Organization ini, kami berharap dapat berkolaborasi dengan berbagai pihak dalam mengembangkan solusi dan teknologi yang relevan di bidang tekstil serta industri terkait lainnya.
+- **High Quality**: Producing textile products with the best quality standards.
+- **Technology Innovation**: Implementing cutting-edge technology to enhance efficiency and quality.
+- **Customer Satisfaction**: Guaranteeing excellent and responsive service to our customers.
 
----
-
-## Proyek dan Inovasi
-Kami terus melakukan riset dan pengembangan (R&D) untuk menghasilkan produk dan sistem yang mampu:
-- Meningkatkan efisiensi dalam proses produksi
-- Menekan biaya operasional tanpa mengurangi kualitas
-- Mendukung kelestarian lingkungan dengan praktik ramah lingkungan
-
-Beberapa inisiatif dan proyek yang tengah kami kembangkan antara lain:
-- Sistem manajemen produksi berbasis web
-- Otomatisasi dan kontrol kualitas berbasis sensor IoT
-- Platform pemantauan rantai pasok (supply chain) secara real-time
+We are committed to continuous innovation and collaboration through the GitHub platform to create better and sustainable textile solutions.
 
 ---
 
-## Bagaimana Anda Dapat Berkontribusi
-Kami terbuka untuk berbagai bentuk kolaborasi dan kontribusi. Jika Anda memiliki ide, saran, atau ingin berkontribusi pada proyek-proyek kami:
-1. **Fork** repositori terkait di GitHub kami.
-2. **Buat Branch** baru untuk menambahkan fitur atau melakukan perbaikan.
-3. **Buat Pull Request** untuk kami tinjau dan diskusikan bersama.
+## 🚀 Featured Projects
 
-Kami juga membuka peluang kerjasama riset dengan akademisi, praktisi, dan komunitas open-source untuk mendorong inovasi di bidang tekstil dan manufaktur.
+We have various projects and initiatives currently being developed to support the textile industry:
 
----
-
-## Struktur Organisasi pada GitHub
-- **Team Pengembangan**: Bertanggung jawab dalam pembuatan dan pemeliharaan proyek berbasis software.
-- **Team Riset & Teknologi**: Fokus pada pengembangan teknologi baru, integrasi IoT, dan solusi AI.
-- **Team QA & Testing**: Memastikan setiap proyek berjalan stabil dan sesuai standar mutu perusahaan.
-- **Team Dokumentasi**: Mengelola dokumentasi, wiki, serta panduan penggunaan dan pengembangan setiap proyek.
+| Project | Description | Status |
+|--------|-----------|--------|
+| **Human Resources Information System (HRIS)** | Web-based platform to efficiently manage production processes. | ![In Progress](https://img.shields.io/badge/Status-In%20Progress-yellow) |
+| **Attendance System** | Platform to monitor the supply chain in real-time, ensuring transparency and efficiency. | ![Planned](https://img.shields.io/badge/Status-Planned-blue) |
+| **Initiate Documentation Project** | Automating quality control using IoT sensors for real-time monitoring. | ![Completed](https://img.shields.io/badge/Status-Completed-green) |
 
 ---
 
-## Kontak
-Jika Anda memiliki pertanyaan atau membutuhkan informasi lebih lanjut, jangan ragu untuk menghubungi kami:
+## 🛠️ Technologies We Use
 
-- **Website**: [https://website.mutugading.com/](https://website.mutugading.com/)
-- **Email**: [it@mutugading.com](mailto:it@mutugading.com)
-- **Alamat**: Indonesia
+We utilize various technologies to support our projects:
 
-Kami akan segera merespons pertanyaan Anda secepat mungkin.
+- **Frontend** : Bootstrap, React, Vue.js
+- **Backend** : Node.js, Laravel
+- **Database** : Oracle, MySQL
+- **CI/CD** : GitHub Actions
+- **IDE** : PHP Storm
 
 ---
 
-## Lisensi
-Semua repositori di bawah Organization ini dilindungi oleh lisensi masing-masing proyek. Silakan membaca berkas `LICENSE` di tiap repositori untuk informasi lebih lanjut.
+## 🤝 How to Contribute
+
+We welcome contributions from the community! Here's how you can contribute:
+
+1. **Fork** the repository you want to contribute to.
+2. **Clone** the repository to your local machine.
+3. **Create a Branch** for the feature or fix you are working on.
+4. **Commit** your changes with a clear message.
+5. **Push** your branch to GitHub and **Create a Pull Request**.
+
+For more detailed information, please read [CONTRIBUTING.md](https://github.com/mutugading/.github/blob/main/CONTRIBUTING.md).
+
+---
+
+## 📂 GitHub Organization Structure
+
+- **Developers** : Develop and maintain software projects.
+- **RnD Team** : Focus on technology innovation and IoT integration.
+- **QA Team** : Ensure the quality and stability of projects.
+- **Documentation Team** : Manage documentation and usage guidelines.
+
+---
+
+## 📞 Contact
+If you have any questions or need more information, feel free to contact us:
+
+- 🌐 **Website** : [https://website.mutugading.com/](https://website.mutugading.com/)
+- 📧 **Email** : [it@mutugading.com](mailto:it@mutugading.com)
+- 📍 **Location** : Indonesia
+
+We will respond to your inquiries as soon as possible.
+
+---
+
+## 📄 License
+All repositories under this Organization are protected by their respective project licenses. Please read the `LICENSE` file in each repository for more information.
 
 ---
 
 <p align="center">
-  <b>Terima kasih telah berkunjung dan mendukung Mutu Gading Tekstil!</b><br>
-  <em>"Bersama kita wujudkan inovasi dan kualitas terbaik."</em>
+  <b>Thank you for visiting and supporting Mutu Gading Tekstil!</b><br>
+  <em>"Together we realize innovation and the best quality."</em><br>
+</p>
+
+---
+
+<p align="right">
+  "Managed by the Information Technology Department"<br>
+  <em>"Last Edited 14 Jan 2025."</em><br>
 </p>
