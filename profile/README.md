@@ -40,9 +40,9 @@ We have various projects and initiatives currently being developed to support th
 
 | Project | Description | Status |
 |--------|-----------|--------|
-| **Human Resources Information System (HRIS)** | Web-based platform to efficiently manage production processes. | ![In Progress](https://img.shields.io/badge/Status-In%20Progress-yellow) |
-| **Attendance System** | Platform to monitor the supply chain in real-time, ensuring transparency and efficiency. | ![Planned](https://img.shields.io/badge/Status-Planned-blue) |
-| **Initiate Documentation Project** | Automating quality control using IoT sensors for real-time monitoring. | ![Completed](https://img.shields.io/badge/Status-Completed-green) |
+| **Human Resources Information System (HRIS)** | Web system for manage employees including all modul HR. | ![In Progress](https://img.shields.io/badge/Status-In%20Progress-yellow) |
+| **Attendance System** | Web system for attandace with realtime face scan and verification. | ![Planned](https://img.shields.io/badge/Status-Planned-blue) |
+| **Initiate Documentation Project** | Initiate documentation of MGTHRIS Projects. | ![Completed](https://img.shields.io/badge/Status-Completed-green) |
 
 ---
 
