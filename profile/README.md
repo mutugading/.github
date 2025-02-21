@@ -41,9 +41,9 @@ We have various projects and initiatives currently being developed to support th
 | Project | Description | Status |
 |--------|-----------|--------|
 | **Human Resources Information System (HRIS)** | Web system for manage employees including all modul HR. | ![In Progress](https://img.shields.io/badge/Status-In%20Progress-yellow) |
-| **Attendance System** | Web system for attandace with realtime face scan and verification. | ![Planned](https://img.shields.io/badge/Status-Planned-blue) |
+| **Attendance System** | Web system for attandace with realtime face scan and verification. | ![In Progress](https://img.shields.io/badge/Status-In%20Progress-yellow) |
+| **Payroll System** | Management Payroll System for employees. | ![Planned](https://img.shields.io/badge/Status-Planned-blue) |
 | **Initiate Documentation Project** | Initiate documentation of MGTHRIS Projects. | ![Completed](https://img.shields.io/badge/Status-Completed-green) |
-
 ---
 
 ## 🛠️ Technologies We Use
