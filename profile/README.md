@@ -106,5 +106,5 @@ All repositories under this Organization are protected by their respective proje
 
 <p align="right">
   "Managed by the Information Technology Department"<br>
-  <em>"Last Edited 18 Jan 2025."</em><br>
+  <em>"Last Edited 21 Feb 2025."</em><br>
 </p>
