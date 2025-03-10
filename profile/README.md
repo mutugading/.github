@@ -50,9 +50,9 @@ We have various projects and initiatives currently being developed to support th
 
 We utilize various technologies to support our projects:
 
-- **Frontend** : Bootstrap, React, Vue.js
+- **Frontend** : Bootstrap, TailwindCss, Livewire
 - **Backend** : Node.js, Laravel
-- **Database** : Oracle, MySQL
+- **Database** : Oracle
 - **CI/CD** : GitHub Actions
 - **IDE** : PHP Storm
 
