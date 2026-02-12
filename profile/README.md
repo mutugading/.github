@@ -5,106 +5,303 @@
 <h1 align="center">Mutu Gading Tekstil</h1>
 
 <p align="center">
-  <b>Official GitHub Organization of Mutu Gading Tekstil</b><br>
-  Indonesia, Central Java
+  <b>Official GitHub Organization of PT. Mutu Gading Tekstil</b><br>
+  Sukoharjo, Central Java, Indonesia
 </p>
 
 <p align="center">
   <a href="https://website.mutugading.com/" target="_blank">
-    <img src="https://img.shields.io/badge/Website-Visit%20Now-blue" alt="Visit Our Website">
+    <img src="https://img.shields.io/badge/Website-mutugading.com-blue?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Visit Our Website">
   </a>
   <a href="mailto:it@mutugading.com">
-    <img src="https://img.shields.io/badge/Email-it%40mutugading.com-green" alt="Email Us">
-  </a>
-  <a href="https://github.com/mutugading" target="_blank">
-    <img src="https://img.shields.io/github/followers/mutugading?label=Follow&style=social" alt="GitHub Followers">
+    <img src="https://img.shields.io/badge/Email-it%40mutugading.com-green?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Us">
   </a>
 </p>
 
 ---
 
-## 🌟 About Us
-**Mutu Gading Tekstil** is a leading textile company in Indonesia focused on:
+## About Us
 
-- **High Quality**: Producing textile products with the best quality standards.
-- **Technology Innovation**: Implementing cutting-edge technology to enhance efficiency and quality.
-- **Customer Satisfaction**: Guaranteeing excellent and responsive service to our customers.
+PT. Mutu Gading Tekstil is a textile manufacturing company based in Indonesia, committed to delivering high-quality products through innovation and cutting-edge technology. Our IT division actively develops internal software systems to support operational efficiency — from human resource management and financial planning to cloud-native infrastructure.
 
-We are committed to continuous innovation and collaboration through the GitHub platform to create better and sustainable textile solutions.
+Through this GitHub Organization, we manage all internal project codebases and remain open to collaboration with academics, practitioners, and the open-source community in the textile and manufacturing industries.
 
 ---
 
-## 🚀 Featured Projects
+## Platform Architecture
 
-We have various projects and initiatives currently being developed to support the textile industry:
+We operate **two main platforms**, each serving different business needs:
 
-| Project | Description | Status |
-|--------|-----------|--------|
-| **Human Resources Information System (HRIS)** | Web system for manage employees including all modul HR. | ![In Progress](https://img.shields.io/badge/Status-In%20Progress-yellow) |
-| **Attendance System** | Web system for attandace with realtime face scan and verification. | ![In Progress](https://img.shields.io/badge/Status-In%20Progress-yellow) |
-| **Payroll System** | Management Payroll System for employees. | ![Planned](https://img.shields.io/badge/Status-Planned-blue) |
-| **Initiate Documentation Project** | Initiate documentation of MGTHRIS Projects. | ![Completed](https://img.shields.io/badge/Status-Completed-green) |
----
-
-## 🛠️ Technologies We Use
-
-We utilize various technologies to support our projects:
-
-- **Frontend** : Bootstrap, TailwindCss, Livewire
-- **Backend** : Node.js, Laravel
-- **Database** : Oracle
-- **CI/CD** : GitHub Actions
-- **IDE** : PHP Storm
+```
+PT. Mutu Gading Tekstil — Software Ecosystem
+│
+├── 🏢 GoApps Platform (Microservices — Cloud-Native)
+│   ├── goapps-frontend        → Web Application (Next.js 16)
+│   ├── goapps-backend         → Microservices API (Go + gRPC)
+│   ├── goapps-shared-proto    → Protocol Buffer Contracts
+│   └── goapps-infra           → Infrastructure as Code (K3s + ArgoCD)
+│
+├── 🏢 Apps Mutugading (Modular Monolith — Laravel 12)
+│   └── apps-mutugading        → Modular ERP (HR, Finance, MIS)
+│
+└── 🏢 MGT HRIS (Legacy — Laravel 8)
+    └── mgthris                → Human Resources Information System
+```
 
 ---
 
-## 🤝 How to Contribute
+## Repository Catalog
 
-We welcome contributions from the community! Here's how you can contribute:
+### GoApps Platform
 
-1. **Fork** the repository you want to contribute to.
-2. **Clone** the repository to your local machine.
-3. **Create a Branch** for the feature or fix you are working on.
-4. **Commit** your changes with a clear message.
-5. **Push** your branch to GitHub and **Create a Pull Request**.
+A microservices-based enterprise platform for managing business operations in a modular fashion. Built with cloud-native architecture and deployed on Kubernetes (K3s).
 
-For more detailed information, please read [CONTRIBUTING.md](https://github.com/mutugading/.github/blob/main/CONTRIBUTING.md).
+| Repository | Description | Tech Stack | Status |
+|---|---|---|---|
+| [`goapps-frontend`](https://github.com/mutugading/goapps-frontend) | Web application dashboard for GoApps Platform | Next.js 16, React 19, TailwindCSS 4, shadcn/ui, TanStack Query, Zustand | 🟢 Active |
+| [`goapps-backend`](https://github.com/mutugading/goapps-backend) | Backend microservices with Clean Architecture | Go 1.24, gRPC, gRPC-Gateway, PostgreSQL 18, Redis 7, RabbitMQ | 🟢 Active |
+| [`goapps-shared-proto`](https://github.com/mutugading/goapps-shared-proto) | Single source of truth for API contracts (Protocol Buffers) | Protobuf, Buf CLI, gRPC, OpenAPI | 🟢 Active |
+| [`goapps-infra`](https://github.com/mutugading/goapps-infra) | Infrastructure as Code — Kubernetes manifests, monitoring, GitOps | K3s, Kustomize, Helm, ArgoCD, Prometheus, Grafana, Loki | 🟢 Active |
+
+**GoApps Architecture:**
+
+```
+                    ┌─────────────┐
+                    │   Browser   │
+                    └──────┬──────┘
+                           │ HTTPS
+                    ┌──────▼──────┐
+                    │   NGINX     │
+                    │   Ingress   │
+                    └──────┬──────┘
+               ┌───────────┼───────────┐
+               ▼           ▼           ▼
+        ┌────────────┐ ┌────────┐ ┌────────┐
+        │  Frontend  │ │Grafana │ │ ArgoCD │
+        │ (Next.js)  │ │  Loki  │ │ GitOps │
+        └─────┬──────┘ └────────┘ └────────┘
+              │ gRPC (BFF Pattern)
+              ▼
+        ┌────────────┐
+        │  Backend   │
+        │ (Go/gRPC)  │
+        └─────┬──────┘
+     ┌────────┼─────────┬──────────┐
+     ▼        ▼         ▼          ▼
+┌──────────┐┌───────┐┌────────┐┌────────┐
+│PostgreSQL││ Redis ││RabbitMQ││ Oracle │
+│(Primary) ││(Cache)││(Queue) ││(Legacy)│
+└──────────┘└───────┘└────────┘└────────┘
+```
+
+**Available / Planned Modules:**
+
+| Module | Path | Status | Description |
+|---|---|---|---|
+| Dashboard | `/dashboard` | ✅ Live | Main dashboard with key metrics |
+| Finance | `/finance/*` | ✅ Live | Financial management (UOM, Costing, Parameters) |
+| HR | `/hr/*` | 🔜 Planned | Human Resources |
+| IT | `/it/*` | 🔜 Planned | IT Management |
+| CI | `/ci/*` | 🔜 Planned | Continuous Improvement |
+| EXSIM | `/exsim/*` | 🔜 Planned | Export / Import Management |
 
 ---
 
-## 📂 GitHub Organization Structure
+### Apps Mutugading
 
-- **Developers** : Develop and maintain software projects.
-- **RnD Team** : Focus on technology innovation and IoT integration.
-- **QA Team** : Ensure the quality and stability of projects.
-- **Documentation Team** : Manage documentation and usage guidelines.
+A modular ERP application built on Laravel 12 for managing integrated company operations. Uses a *modular monolith* architecture powered by `nwidart/laravel-modules`.
+
+| Repository | Description | Tech Stack | Status |
+|---|---|---|---|
+| [`apps-mutugading`](https://github.com/mutugading/apps-mutugading) | Modular ERP — HR, Finance, MIS, Auth | Laravel 12, Livewire 3, Flux UI Pro, Tailwind CSS 4, Oracle DB | 🟢 Active |
+
+**Modules:**
+
+| Module | Alias | Description |
+|---|---|---|
+| **Auth** | `auth` | Authentication & authorization, Spatie Permission, dual auth mode |
+| **Core** | `core` | Shared services, menu system, base components |
+| **Finance** | `finance` | Financial reporting and management |
+| **HR** | `hr` | HRIS — employee data, attendance, scheduling, payroll |
+| **MIS** | `mis` | Management Information System — reporting, dashboards, analytics |
+| **Public** | `public` | Public-facing pages and landing content |
+| **UI** | `ui` | Shared Blade component library (buttons, modals, forms, grids) |
+
+**Environments:**
+
+| Environment | URL | Branch |
+|---|---|---|
+| Production | `https://apps.mutugading.com:15039` | `main` |
+| Staging | `https://staging-apps.mutugading.com:15039` | `develop` |
 
 ---
 
-## 📞 Contact
-If you have any questions or need more information, feel free to contact us:
+### MGT HRIS (Legacy)
 
-- 🌐 **Website** : [https://website.mutugading.com/](https://website.mutugading.com/)
-- 📧 **Email** : [it@mutugading.com](mailto:it@mutugading.com)
-- 📍 **Location** : Indonesia
+The first-generation HRIS that remains actively operational. Built with Laravel 8 and connected directly to Oracle Database.
 
-We will respond to your inquiries as soon as possible.
+| Repository | Description | Tech Stack | Status |
+|---|---|---|---|
+| [`mgthris`](https://github.com/mutugading/mgthris) | Human Resources Information System | Laravel 8, Bootstrap, Oracle SQL, Livewire 2, YajraBox | 🟡 Maintenance |
+
+**Key Features:** Employee Management, Payroll System, Attendance Tracking, Dynamic Role-Based Menus.
 
 ---
 
-## 📄 License
-All repositories under this Organization are protected by their respective project licenses. Please read the `LICENSE` file in each repository for more information.
+## Tech Stack Overview
+
+### Languages & Frameworks
+
+| Technology | Version | Used In |
+|---|---|---|
+| Go | 1.24 | goapps-backend |
+| PHP | >= 8.2 | apps-mutugading |
+| PHP | 7.4.9 | mgthris |
+| TypeScript / JavaScript | 5.x | goapps-frontend |
+| Protocol Buffers | 3.x | goapps-shared-proto |
+
+### Frontend
+
+| Technology | Version | Used In |
+|---|---|---|
+| Next.js | 16 | goapps-frontend |
+| React | 19 | goapps-frontend |
+| TailwindCSS | 4 | goapps-frontend, apps-mutugading |
+| shadcn/ui | latest | goapps-frontend |
+| Livewire | 3 | apps-mutugading |
+| Livewire | 2 | mgthris |
+| Flux UI Pro | 2 | apps-mutugading |
+| Bootstrap | — | mgthris |
+| Alpine.js | 3 | apps-mutugading |
+
+### Backend & API
+
+| Technology | Version | Used In |
+|---|---|---|
+| gRPC + gRPC-Gateway | 1.78 | goapps-backend |
+| Laravel | 12 | apps-mutugading |
+| Laravel | 8 | mgthris |
+| Buf CLI | v2 | goapps-shared-proto |
+
+### Database & Storage
+
+| Technology | Used In | Notes |
+|---|---|---|
+| PostgreSQL 18 | goapps-backend | Primary database (GoApps) |
+| Oracle SQL | apps-mutugading, mgthris | Enterprise database (ERP & HRIS) |
+| Redis 7 | goapps-backend | Caching layer |
+| RabbitMQ | goapps-backend | Message queue |
+| MinIO | goapps-infra | Object storage (backup) |
+
+### Infrastructure & DevOps
+
+| Technology | Version | Notes |
+|---|---|---|
+| K3s | v1.34.x | Lightweight Kubernetes |
+| Kustomize | v5.3.0 | Kubernetes config management |
+| Helm | v3.x | Kubernetes package manager |
+| ArgoCD | v7.7.5 | GitOps continuous delivery |
+| Prometheus | — | Metrics & monitoring |
+| Grafana | — | Dashboards & visualization |
+| Loki + Promtail | — | Log aggregation |
+| Jaeger | — | Distributed tracing |
+| NGINX Ingress | — | Load balancer & TLS termination |
+| GitHub Actions | — | CI/CD pipelines |
+
+---
+
+## CI/CD & DevOps
+
+All repositories use **GitHub Actions** for CI/CD pipelines with **self-hosted runners** on staging and production VPS.
+
+### GoApps Platform (Kubernetes / GitOps)
+
+```
+Push/PR → Lint → Test → Build → Docker (GHCR) → ArgoCD Sync → Staging → Production
+```
+
+| Stage | Tools |
+|---|---|
+| Code Quality | golangci-lint, ESLint, buf lint |
+| Testing | Go test, TypeScript check |
+| Container | Docker multi-stage build, GitHub Container Registry (GHCR) |
+| Delivery | ArgoCD auto-sync (staging), manual sync (production) |
+| Monitoring | Prometheus + Grafana + Loki + Jaeger |
+
+### Apps Mutugading (VPS / Direct Deploy)
+
+```
+Push/PR → Lint (Pint) → Test (Pest) → Release (SemVer) → Deploy (SSH)
+```
+
+| Stage | Tools |
+|---|---|
+| Code Quality | Laravel Pint (PSR-12) |
+| Testing | Pest v4, SQLite in-memory |
+| Release | Auto SemVer tagging via GitHub Actions |
+| Delivery | SSH deploy script, maintenance mode, cache optimization |
+
+---
+
+## Team Structure
+
+| Team | Responsibility |
+|---|---|
+| **GoApps Platform** | Development and maintenance of the entire GoApps ecosystem (frontend, backend, infra, proto) |
+| **Apps Development** | Development of Apps Mutugading (Laravel modular ERP) and MGT HRIS |
+| **DevOps & Infrastructure** | Kubernetes management, monitoring, CI/CD pipelines, backup & disaster recovery |
+| **QA & Testing** | Ensuring quality and stability of every release through automated testing |
+
+---
+
+## How to Contribute
+
+We welcome all forms of collaboration and contribution. Each repository contains `CONTRIBUTING.md` and `RULES.md` files that describe development conventions in detail.
+
+**Contribution steps:**
+
+1. **Fork** the relevant repository
+2. **Create a Branch** from `develop` (format: `feat/feature-name` or `fix/bug-name`)
+3. **Follow the conventions** for commits and coding style as described in `RULES.md`
+4. **Create a Pull Request** to the `develop` branch for review
+
+We also welcome research partnerships with academics, practitioners, and the open-source community to drive innovation in textile and manufacturing.
+
+---
+
+## Contact
+
+| Channel | Detail |
+|---|---|
+| **Website** | [https://website.mutugading.com/](https://website.mutugading.com/) |
+| **Email** | [it@mutugading.com](mailto:it@mutugading.com) |
+| **Location** | Sukoharjo, Central Java, Indonesia |
+| **GitHub Issues** | Use the Issues tab in each respective repository |
+
+---
+
+## Licenses
+
+Repositories under this Organization use different licenses depending on each project's requirements:
+
+| Repository | License |
+|---|---|
+| `goapps-frontend` | Proprietary |
+| `goapps-backend` | Proprietary |
+| `goapps-shared-proto` | Proprietary |
+| `goapps-infra` | Proprietary |
+| `apps-mutugading` | MIT License |
+| `mgthris` | Proprietary |
+
+Please refer to the `LICENSE` file in each repository for more details.
 
 ---
 
 <p align="center">
-  <b>Thank you for visiting and supporting Mutu Gading Tekstil!</b><br>
-  <em>"Together we realize innovation and the best quality."</em><br>
+  <b>Thank you for visiting and supporting PT. Mutu Gading Tekstil!</b><br>
+  <em>"Together we build innovation and the highest quality."</em>
 </p>
 
----
-
-<p align="right">
-  "Managed by the Information Technology Department"<br>
-  <em>"Last Edited 21 Feb 2025."</em><br>
+<p align="center">
+  <sub>© 2024-2026 PT. Mutu Gading Tekstil. All Rights Reserved.</sub>
 </p>
