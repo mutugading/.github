@@ -129,10 +129,10 @@ A modular ERP application built on Laravel 12 for managing integrated company op
 
 **Environments:**
 
-| Environment | URL | Branch |
-|---|---|---|
-| Production | `https://apps.mutugading.com:15039` | `main` |
-| Staging | `https://staging-apps.mutugading.com:15039` | `develop` |
+| Environment | Branch |
+|---|---|
+| Production | `main` |
+| Staging | `develop` |
 
 ---
 
